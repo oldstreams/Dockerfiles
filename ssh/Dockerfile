@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER Liang Dong <greatfox@gmail.com>
 
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.orig
+#RUN mv /etc/apt/sources.list /etc/apt/sources.list.orig
 #RUN sed 's/arch/cn\.arch/' /etc/apt/sources.list.orig > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y upgrade
