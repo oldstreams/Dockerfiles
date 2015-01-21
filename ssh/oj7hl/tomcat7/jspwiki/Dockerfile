@@ -1,4 +1,4 @@
-FROM greatfox/wikijsp
+FROM greatfox/tomcat7
 MAINTAINER Liang Dong <greatfox@gmail.com>
 
 RUN rm -f /var/lib/tomcat7/ROOT
