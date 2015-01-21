@@ -9,6 +9,7 @@ RUN mkdir -p /p/web/www-data
 RUN mkdir /p/tmp
 RUN chown -R tomcat7:tomcat7 /p
 
+RUN apt-get -y install unzip
 RUN unzip -d /p/web/www-data/ /tmp/JSPWiki-corepages_zh_CN-2.10.1.zip
 RUN mv /p/web/www-data/JSPWiki-corepages_zh_CN-2.10.1 /p/web/www-data/jspwiki
 
