@@ -11,6 +11,7 @@ RUN unzip -d /p/web/www-data/ /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip
 RUN mv /p/web/www-data/jspwiki-wikipages-zh_CN-2.10.1 /p/web/www-data/jspwiki
 
 RUN echo "log4j.rootLogger=INFO, file" >> /usr/share/tomcat7/lib/log4j.properties
+RUN echo "log4j.appender.file=org.apache.log4j.RollingFileAppender" >> /usr/share/tomcat7/lib/log4j.properties
 RUN echo "log4j.appender.file.layout=org.apache.log4j.PatternLayout" >> /usr/share/tomcat7/lib/log4j.properties
 RUN echo "log4j.appender.file.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p - %m%n" >> /usr/share/tomcat7/lib/log4j.properties
 RUN echo "log4j.appender.file.File=/var/log/tomcat7/jspwiki.log" >> /usr/share/tomcat7/lib/log4j.properties
