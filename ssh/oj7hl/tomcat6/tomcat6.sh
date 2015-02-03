@@ -1,4 +1,4 @@
 #!/bin/sh
 
-docker run -i -t $* "greatfox/tomcat6" 
+docker run -i -t --privileged $* "greatfox/tomcat6" 
 
