@@ -14,7 +14,7 @@ RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 RUN touch /initrc
-RUN echo "/usr/bin/service ssh start\n" >> /initrc
+RUN echo "/usr/bin/service ssh start" >> /initrc
 
 EXPOSE 22
 CMD ["/bin/bash", "--rcfile", "/initrc"]
