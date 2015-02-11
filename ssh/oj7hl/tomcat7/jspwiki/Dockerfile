@@ -9,10 +9,10 @@ RUN chown -R tomcat7:tomcat7 /var/jspwiki
 
 RUN wget -O /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip http://archive.apache.org/dist/jspwiki/2.10.1/wikipages/jspwiki-wikipages-zh_CN-2.10.1.zip
 RUN apt-get -y install unzip
-RUN unzip -d /var/jspwiki/page/ /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip
-RUN mv /var/jspwiki/page/jspwiki-wikipages-zh_CN-2.10.1 /var/jspwiki/page/jspwiki
+RUN unzip -d /tmp/ /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip
+RUN mv /tmp/jspwiki-wikipages-zh_CN-2.10.1/* /var/jspwiki/page/
 
-RUN echo -e 'jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
+RUN echo 'jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
 jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \n\
 jspwiki.workDir = /var/jspwiki/work \n\
 jspwiki.encoding = UTF-8 \n\
