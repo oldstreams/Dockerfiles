@@ -12,14 +12,14 @@ RUN apt-get -y install unzip
 RUN unzip -d /var/jspwiki/page/ /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip
 RUN mv /var/jspwiki/page/jspwiki-wikipages-zh_CN-2.10.1 /var/jspwiki/page/jspwiki
 
-RUN echo 'jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \
-jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \
-jspwiki.workDir = /var/jspwiki/work \
-jspwiki.encoding = UTF-8 \
-jspwiki.translatorReader.matchEnglishPlurals = true \
-jspwiki.lucene.analyzer = org.apache.lucene.analysis.standard.cn.ChineseAnalyzer \
-jspwiki.urlConstructor = ShortURLConstructor \
-jspwiki.defaultprefs.template.language = cn \
+RUN echo -e 'jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
+jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \n\
+jspwiki.workDir = /var/jspwiki/work \n\
+jspwiki.encoding = UTF-8 \n\
+jspwiki.translatorReader.matchEnglishPlurals = true \n\
+jspwiki.lucene.analyzer = org.apache.lucene.analysis.standard.cn.ChineseAnalyzer \n\
+jspwiki.urlConstructor = ShortURLConstructor \n\
+jspwiki.defaultprefs.template.language = cn \n\
 log4j.appender.FileLog.File = /var/jspwiki/log/jspwiki.log' >> /usr/share/tomcat7/lib/jspwiki-custom.properties
 
 RUN wget -O /var/lib/tomcat7/webapps/ROOT.war http://archive.apache.org/dist/jspwiki/2.10.1/binaries/JSPWiki.war
