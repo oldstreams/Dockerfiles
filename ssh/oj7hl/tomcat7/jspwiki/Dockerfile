@@ -5,7 +5,8 @@ RUN mkdir -p /var/jspwiki/page \
  /var/jspwiki/attachment \
  /var/jspwiki/log \
  /var/jspwiki/work
-RUN chown -R tomcat7:tomcat7 /var/jspwiki
+#RUN chown -R tomcat7:tomcat7 /var/jspwiki
+RUN chown -R tomcat6:tomcat6 /var/jspwiki
 
 #RUN wget -O /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip http://archive.apache.org/dist/jspwiki/2.10.1/wikipages/jspwiki-wikipages-zh_CN-2.10.1.zip
 #RUN apt-get -y install unzip
