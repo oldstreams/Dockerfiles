@@ -1,10 +1,10 @@
 FROM greatfox/tomcat7
 MAINTAINER Liang Dong <greatfox@gmail.com>
 
-RUN mkdir -p /var/jspwiki/page
-RUN mkdir /var/jspwiki/attachment
-RUN mkdir /var/jspwiki/log
-RUN mkdir /var/jspwiki/work
+RUN mkdir -p /var/jspwiki/page \
+ /var/jspwiki/attachment \
+ /var/jspwiki/log \
+ /var/jspwiki/work
 RUN chown -R tomcat7:tomcat7 /var/jspwiki
 
 RUN wget -O /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip http://archive.apache.org/dist/jspwiki/2.10.1/wikipages/jspwiki-wikipages-zh_CN-2.10.1.zip
