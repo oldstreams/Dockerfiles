@@ -25,8 +25,9 @@ jspwiki.translatorReader.matchEnglishPlurals = false \n\
 jspwiki.lucene.analyzer = org.apache.lucene.analysis.standard.cn.ChineseAnalyzer \n\
 jspwiki.urlConstructor = ShortURLConstructor \n\
 jspwiki.defaultprefs.template.language = cn \n\
-log4j.appender.FileLog.File = /var/jspwiki/log/jspwiki.log' >> /usr/share/tomcat7/lib/jspwiki-custom.properties
+log4j.appender.FileLog.File = /var/jspwiki/log/jspwiki.log' >> /usr/share/tomcat6/lib/jspwiki-custom.properties
 
 #RUN wget -O /var/lib/tomcat7/webapps/ROOT.war http://archive.apache.org/dist/jspwiki/2.10.1/binaries/JSPWiki.war
-RUN rm -rf /var/lib/tomcat7/webapps/ROOT
+#RUN rm -rf /var/lib/tomcat7/webapps/ROOT
+RUN rm -rf /var/lib/tomcat6/webapps/ROOT
 
