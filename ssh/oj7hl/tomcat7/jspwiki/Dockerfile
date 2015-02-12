@@ -15,8 +15,7 @@ RUN mv /tmp/jspwiki-wikipages-zh_CN-2.10.1/* /var/jspwiki/page/
 RUN echo 'jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
 jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \n\
 jspwiki.workDir = /var/jspwiki/work \n\
-jspwiki.encoding = UTF-8 \n\
-jspwiki.translatorReader.matchEnglishPlurals = true \n\
+jspwiki.translatorReader.matchEnglishPlurals = false \n\
 jspwiki.lucene.analyzer = org.apache.lucene.analysis.standard.cn.ChineseAnalyzer \n\
 jspwiki.urlConstructor = ShortURLConstructor \n\
 jspwiki.defaultprefs.template.language = cn \n\
