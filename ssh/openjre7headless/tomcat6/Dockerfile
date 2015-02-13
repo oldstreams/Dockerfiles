@@ -1,4 +1,4 @@
-FROM greatfox/oj7hl
+FROM greatfox/openjre7headless
 MAINTAINER Liang Dong <greatfox@gmail.com>
 
 RUN apt-get -y install tomcat6
