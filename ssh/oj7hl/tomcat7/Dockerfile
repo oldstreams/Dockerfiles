@@ -1,4 +1,4 @@
-FROM greatfox/oraclejdk8
+FROM greatfox/oj7hl
 MAINTAINER Liang Dong <greatfox@gmail.com>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tomcat7
