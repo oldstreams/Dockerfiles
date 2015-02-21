@@ -9,4 +9,5 @@ RUN echo 'user * pass *\n' >> /etc/ppp/chap-secrets
 
 RUN echo 'service pptpd start' >> /initrc
 
+EXPOSE 47
 EXPOSE 1723
