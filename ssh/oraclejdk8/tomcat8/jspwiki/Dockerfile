@@ -12,7 +12,7 @@ RUN apt-get -y install unzip
 RUN unzip -d /tmp/ /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip
 RUN mv /tmp/jspwiki-wikipages-zh_CN-2.10.1/* /var/jspwiki/page/
 
-RUN echo 'jspwiki.baseURL = http://localhost:8080/ \n\
+RUN echo '
 jspwiki.referenceStyle = relative \n\
 jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
 jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \n\
@@ -23,6 +23,7 @@ jspwiki.urlConstructor = ShortURLConstructor \n\
 jspwiki.defaultprefs.template.language = cn \n\
 log4j.appender.FileLog.File = /var/jspwiki/log/jspwiki.log' >> /opt/tomcat8/lib/jspwiki-custom.properties
 
+RUN rm -Rf /tmp/jspwiki*
 RUN rm -Rf /opt/tomcat8/webapps/*
 RUN wget -O /opt/tomcat8/webapps/ROOT.war https://www.apache.org/dist/jspwiki/2.10.1/binaries/JSPWiki.war
 
