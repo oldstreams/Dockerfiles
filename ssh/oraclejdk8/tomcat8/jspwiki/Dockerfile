@@ -12,7 +12,7 @@ RUN apt-get -y install unzip
 RUN unzip -d /tmp/ /tmp/jspwiki-wikipages-zh_CN-2.10.1.zip
 RUN mv /tmp/jspwiki-wikipages-zh_CN-2.10.1/* /var/jspwiki/page/
 
-RUN echo '
+RUN echo ' \
 jspwiki.referenceStyle = relative \n\
 jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
 jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \n\
