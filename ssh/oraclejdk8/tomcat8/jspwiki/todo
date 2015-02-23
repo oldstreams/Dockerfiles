@@ -1,0 +1,4 @@
+access http://hostname/Install.jsp generate password.
+set /var/jspwiki/page, /var/jspwiki/log/jspwiki.log, /var/jspwiki/work
+update /opt/tomcat8/lib/jspwiki-custom.properties set baseURL and applicationName
+
