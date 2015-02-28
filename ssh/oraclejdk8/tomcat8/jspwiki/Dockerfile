@@ -19,6 +19,8 @@ RUN wget -O /opt/tomcat8/webapps/ROOT.war https://www.apache.org/dist/jspwiki/2.
 RUN echo 'jspwiki.baseURL = http:/// \n\
 jspwiki.applicationName = Wiki \n\
 jspwiki.referenceStyle = relative \n\
+jspwiki.pageProvider =VersioningFileProvider \n\
+jspwiki.usePageCache = true \n\
 jspwiki.fileSystemProvider.pageDir = /var/jspwiki/page \n\
 jspwiki.basicAttachmentProvider.storageDir = /var/jspwiki/attachment \n\
 jspwiki.workDir = /var/jspwiki/work \n\
