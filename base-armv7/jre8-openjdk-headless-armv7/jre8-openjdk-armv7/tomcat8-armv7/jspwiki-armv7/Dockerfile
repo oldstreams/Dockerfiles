@@ -16,7 +16,7 @@ RUN rm -Rf /tmp/jspwiki*
 RUN rm -Rf /var/lib/tomcat8/webapps/*
 RUN curl https://www.apache.org/dist/jspwiki/2.10.1/binaries/JSPWiki.war > /var/lib/tomcat8/webapps/ROOT.war
 
-RUN echo 'jspwiki.baseURL = http:/// \n\
+RUN echo -e 'jspwiki.baseURL = http:/// \n\
 jspwiki.applicationName = Wiki \n\
 jspwiki.referenceStyle = relative \n\
 jspwiki.pageProvider =VersioningFileProvider \n\
